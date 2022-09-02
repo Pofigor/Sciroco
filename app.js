@@ -44,12 +44,12 @@ const sessionConfig = {
 };
   // * 7 подключение мидлвара для куки
 app.use(session(sessionConfig));
-app.use('/', homeRouter);
-app.use('/register', regRoutes);
-app.use('/login', logRoutes);
-app.use('/logout', logoutRoutes);
-app.use('/order', orderRouts);
-app.use('/orders', ordersPageRouter);
+app.use('', homeRouter);
+app.use('register', regRoutes);
+app.use('login', logRoutes);
+app.use('logout', logoutRoutes);
+app.use('order', orderRouts);
+app.use('orders', ordersPageRouter);
 
 app.listen(PORT, async () => {
   try {
