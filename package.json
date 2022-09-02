@@ -1,11 +1,14 @@
 {
   "name": "sciroco",
   "version": "1.0.0",
+  "homepage": "https://Pofigor.github.io",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js --ext js,jsx --ignore sessions"
+    "start": "nodemon app.js --ext js,jsx --ignore sessions",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/Pofigor/Sciroco/issues"
   },
-  "homepage": "https://github.com/Pofigor/Sciroco#readme",
   "dependencies": {
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
@@ -45,6 +47,7 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^4.0.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.19"
   },
